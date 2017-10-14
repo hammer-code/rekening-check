@@ -5,7 +5,8 @@
   "license": "MIT",
   "author": "Afrian Junior",
   "scripts": {
-    "dev": "webpack --watch nodemon ./bin/server.js",
+    "build": "webpack --watch",
+    "dev":  "nodemon ./bin/server.js",
     "start": "webpack-dev-server --open"
   },
   "devDependencies": {
