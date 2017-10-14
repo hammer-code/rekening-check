@@ -4,6 +4,7 @@ const path = require('path');
     entry: {
       app: './src/app.js'
     },
+    target: 'node',
     output: {
       path: path.resolve(__dirname, 'bin'),
       filename: 'server.js'
@@ -13,10 +14,22 @@ const path = require('path');
       contentBase: './bin'
      },
     module: {
-      loaders: [{
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      }]
-     }
+      loaders: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader'
+        },
+        { 
+          test: /\.json$/, 
+          loader: 'json-loader' 
+        }
+      ]
+    },
+    node: {
+      console: true,
+      fs: 'empty',
+      net: 'empty',
+      tls: 'empty'
+    }
  };
