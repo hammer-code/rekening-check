@@ -1,3 +1,9 @@
 import scraper from './module/scraper.js'
 
-scraper()
+scraper.exec(2147483647)
+    .then((res) => {
+        console.log(res)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
