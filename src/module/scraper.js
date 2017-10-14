@@ -1,3 +1,3 @@
-const tai = () => console.log('trl')
+const scrap = () => console.log('test babel')
 
-export default tai
+export default scrap
